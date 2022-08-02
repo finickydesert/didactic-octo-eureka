@@ -5,7 +5,7 @@ import os
 from cryptography.fernet import Fernet
 
 files = []
-a = input("1: ubuntu update\n2:ubuntu upgrade\n3:tactical encrypt\n4:decrypt\n5:sudo\n6:arch\n7:Flatpak only\npress any other number to exit")
+a = input("1: ubuntu update\n2:ubuntu upgrade\n3:tactical encrypt\n4:decrypt\n5:sudo\n6:arch\n7:Flatpak only\npress any other number to exit\n")
 x = int(a)
 
 def flatpak():
@@ -67,23 +67,21 @@ def ubuntu_upgrade():
     flatpak()
 
 match x:
-    case 1:
-        ubuntu_the_rest()
-    case 2:
-        ubuntu_upgrade()
-    case 3:
-        encrypt()
-    case 4:
-        decrypt()
-    case 5:
-        os.system("clear")
-        os.system("sudo -i")
-    case 6:
-        os.system("sudo pacman -Syuu")
-        flatpak()
-        os.system("neofetch")
-    case 7:
-        flatpak()
-    case other:
-        os.system("clear")
-        exit()
+  case 1:
+     ubuntu_the_rest()
+  case 2:
+    ubuntu_upgrade()
+  case 3:
+    encrypt()
+  case 4:
+    decrypt()
+  case 5:
+    os.system("clear")
+    os.system("sudo -i")
+  case 6:
+    os.system("sudo pacman -Syuu")
+    flatpak()
+    os.system("neofetch")
+  case 7:
+    flatpak()
+  
