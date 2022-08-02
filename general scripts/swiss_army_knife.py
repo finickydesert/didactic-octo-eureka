@@ -9,7 +9,7 @@ a = input("1: ubuntu update\n2:ubuntu upgrade\n3:tactical encrypt\n4:decrypt\n5:
 x = int(a)
 
 def flatpak():
-    os.system("sudo flatpak refresh; sudo flatpak update --assumeyes")
+    os.system("sudo flatpak update --assumeyes")
 
 
 def encrypt():

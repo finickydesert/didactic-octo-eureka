@@ -1,6 +1,9 @@
 package main
-
-import "fmt"
+// notes on unfilmilar imports could be found at: https://pkg.go.dev/github.com/kr/fernet#section-readme
+import (
+	"fmt"
+	"https://github.com/fernet/fernet-go"
+)
 
 func main() {
 	var answer string
