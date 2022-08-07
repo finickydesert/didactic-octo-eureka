@@ -3,6 +3,7 @@
 # need python 3.10 at least to run
 import os
 from cryptography.fernet import Fernet
+import ubelt as ub
 
 files = []
 a = input("1: ubuntu update\n2:ubuntu upgrade\n3:tactical encrypt\n4:decrypt\n5:sudo\n6:arch\n7:Flatpak only\npress any other number to exit\n")
