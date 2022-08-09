@@ -49,8 +49,8 @@ def decrypt():
         with open(file, "wb") as thefile:
             thefile.write(contents_decrypted)
 
-    
-def ubuntu_the_rest():
+match x:
+  case 1:
     os.system("sudo apt update")
     os.system("sudo apt upgrade -y")
     os.system("sudo apt autoremove -y")
@@ -58,20 +58,12 @@ def ubuntu_the_rest():
     flatpak()
     os.system("clear")
     os.system("neofetch")
-
-
-def ubuntu_upgrade():
+  case 2:
     os.system("sudo apt update")
     os.system("sudo apt dist-upgrade")
     os.system("sudo apt autoremove -y")
     os.system("sudo snap refresh")
     flatpak()
-
-match x:
-  case 1:
-     ubuntu_the_rest()
-  case 2:
-    ubuntu_upgrade()
   case 3:
     encrypt()
   case 4:
@@ -80,8 +72,9 @@ match x:
     os.system("clear")
     os.system("sudo -i")
   case 6:
-    os.system("sudo pacman -Syuu")
+    os.system("yes | sudo pacman -Syuu")
     flatpak()
+    os.system("clear")
     os.system("neofetch")
   case 7:
     flatpak()
