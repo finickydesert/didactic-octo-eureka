@@ -6,8 +6,8 @@ from cryptography.fernet import Fernet
 import ubelt as ub
 
 files = []
-a = input("1: ubuntu update\n2:ubuntu upgrade\n3:tactical encrypt\n4:decrypt\n5:sudo\n6:arch\n7:Flatpak only\npress any other number to exit\n")
-x = int(a)
+question = input("1: ubuntu update\n2:ubuntu upgrade\n3:tactical encrypt\n4:decrypt\n5:sudo\n6:arch\n7:Flatpak only\npress any other number to exit\n")
+answer = int(question)
 
 def flatpak():
     os.system("sudo flatpak update --assumeyes")
@@ -49,7 +49,7 @@ def decrypt():
         with open(file, "wb") as thefile:
             thefile.write(contents_decrypted)
 
-match x:
+match answer:
   case 1:
     os.system("sudo apt update")
     os.system("sudo apt upgrade -y")
